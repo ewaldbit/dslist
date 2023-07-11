@@ -1,17 +1,13 @@
 package com.superior.dslist.dtos;
 
 import com.superior.dslist.entities.Game;
-import jakarta.persistence.Column;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
 
 public class GameMinDTO {
 
     private Long id;
     private String title;
     private Integer year;
-    private String imgURL;
+    private String ImgUrl;
     private String shortDescription;
 
     public GameMinDTO() {
@@ -21,7 +17,7 @@ public class GameMinDTO {
         id = entity.getId();
         title = entity.getTitle();
         year = entity.getYear();
-        imgURL = entity.getImgURL();
+        ImgUrl = entity.getImgUrl();
         shortDescription = entity.getShortDescription();
     }
 
@@ -37,8 +33,8 @@ public class GameMinDTO {
         return year;
     }
 
-    public String getImgURL() {
-        return imgURL;
+    public String getImgUrl() {
+        return ImgUrl;
     }
 
     public String getShortDescription() {
