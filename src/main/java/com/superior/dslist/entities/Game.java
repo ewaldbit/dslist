@@ -1,6 +1,10 @@
 package com.superior.dslist.entities;
 
 import jakarta.persistence.*;
+import jakarta.websocket.Encoder;
+import org.w3c.dom.Text;
+
+import java.awt.*;
 
 @Entity
 @Table(name = "tb_game")
@@ -10,17 +14,22 @@ public class Game {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String title;
+    private Double score;
     @Column(name = "game_year")
     private Integer year;
     private  String genre;
     private String platforms;
+    @Column(name = "img_url")
     private String imgURL;
+    @Column(columnDefinition = "TEXT")
     private String shortDescription;
+    @Column(columnDefinition = "TEXT")
     private String longDescription;
 
-    public Game(Long id, String title, Integer year, String genre, String platforms, String imgURL, String shortDescription, String longDescription) {
+    public Game(Long id, String title, Integer year, String genre, String platforms, Double score, String imgURL, String shortDescription, String longDescription) {
         this.id = id;
         this.title = title;
+        this.score = score;
         this.year = year;
         this.genre = genre;
         this.platforms = platforms;
@@ -47,6 +56,14 @@ public class Game {
 
     public Integer getYear() {
         return year;
+    }
+
+    public Double getScore() {
+        return score;
+    }
+
+    public void setScore(Double score) {
+        this.score = score;
     }
 
     public void setYear(Integer year) {
