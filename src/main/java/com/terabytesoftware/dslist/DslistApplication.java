@@ -1,4 +1,4 @@
-package com.superior.dslist;
+package com.terabytesoftware.dslist;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

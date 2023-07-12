@@ -1,4 +1,4 @@
-package com.superior.dslist.projections;
+package com.terabytesoftware.dslist.projections;
 
 public interface GameMinProjection {
 

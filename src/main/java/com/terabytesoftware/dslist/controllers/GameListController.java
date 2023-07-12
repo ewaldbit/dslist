@@ -1,9 +1,9 @@
-package com.superior.dslist.controllers;
+package com.terabytesoftware.dslist.controllers;
 
-import com.superior.dslist.dtos.GameListDTO;
-import com.superior.dslist.dtos.GameMinDTO;
-import com.superior.dslist.services.GameListService;
-import com.superior.dslist.services.GameService;
+import com.terabytesoftware.dslist.dtos.GameListDTO;
+import com.terabytesoftware.dslist.dtos.GameMinDTO;
+import com.terabytesoftware.dslist.services.GameListService;
+import com.terabytesoftware.dslist.services.GameService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;

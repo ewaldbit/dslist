@@ -1,7 +1,7 @@
-package com.superior.dslist.repositories;
+package com.terabytesoftware.dslist.repositories;
 
-import com.superior.dslist.entities.Game;
-import com.superior.dslist.projections.GameMinProjection;
+import com.terabytesoftware.dslist.entities.Game;
+import com.terabytesoftware.dslist.projections.GameMinProjection;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 

@@ -1,6 +1,6 @@
-package com.superior.dslist.repositories;
+package com.terabytesoftware.dslist.repositories;
 
-import com.superior.dslist.entities.GameList;
+import com.terabytesoftware.dslist.entities.GameList;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface GameListRepository extends JpaRepository<GameList, Long> {

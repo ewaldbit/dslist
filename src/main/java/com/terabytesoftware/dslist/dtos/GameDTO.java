@@ -1,39 +1,26 @@
-package com.superior.dslist.entities;
+package com.terabytesoftware.dslist.dtos;
 
-import jakarta.persistence.*;
+import com.terabytesoftware.dslist.entities.Game;
+import org.springframework.beans.BeanUtils;
 
-@Entity
-@Table(name = "tb_game")
-public class Game {
+public class GameDTO {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String title;
     private Double score;
-    @Column(name = "game_year")
     private Integer year;
     private  String genre;
     private String platforms;
-    private String ImgUrl;
-    @Column(columnDefinition = "TEXT")
+    private String imgUrl;
     private String shortDescription;
-    @Column(columnDefinition = "TEXT")
     private String longDescription;
 
-    public Game() {
+    public GameDTO(){
+
     }
 
-    public Game(Long id, String title, Integer year, String genre, String platforms, Double score, String ImgUrl, String shortDescription, String longDescription) {
-        this.id = id;
-        this.title = title;
-        this.score = score;
-        this.year = year;
-        this.genre = genre;
-        this.platforms = platforms;
-        this.ImgUrl = ImgUrl;
-        this.shortDescription = shortDescription;
-        this.longDescription = longDescription;
+    public GameDTO(Game entity){
+        BeanUtils.copyProperties(entity, this);
     }
 
     public Long getId() {
@@ -52,16 +39,16 @@ public class Game {
         this.title = title;
     }
 
-    public Integer getYear() {
-        return year;
-    }
-
     public Double getScore() {
         return score;
     }
 
     public void setScore(Double score) {
         this.score = score;
+    }
+
+    public Integer getYear() {
+        return year;
     }
 
     public void setYear(Integer year) {
@@ -85,11 +72,11 @@ public class Game {
     }
 
     public String getImgUrl() {
-        return ImgUrl;
+        return imgUrl;
     }
 
-    public void setImgUrl(String ImgUrl) {
-        this.ImgUrl = ImgUrl;
+    public void setImgUrl(String imgUrl) {
+        this.imgUrl = imgUrl;
     }
 
     public String getShortDescription() {
@@ -106,18 +93,5 @@ public class Game {
 
     public void setLongDescription(String longDescription) {
         this.longDescription = longDescription;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof Game game)) return false;
-
-        return getId().equals(game.getId());
-    }
-
-    @Override
-    public int hashCode() {
-        return getId().hashCode();
     }
 }

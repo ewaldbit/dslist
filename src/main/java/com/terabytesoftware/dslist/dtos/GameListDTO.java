@@ -1,6 +1,6 @@
-package com.superior.dslist.dtos;
+package com.terabytesoftware.dslist.dtos;
 
-import com.superior.dslist.entities.GameList;
+import com.terabytesoftware.dslist.entities.GameList;
 
 public class GameListDTO {
 

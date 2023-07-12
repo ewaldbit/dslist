@@ -1,6 +1,8 @@
-package com.superior.dslist.entities;
+package com.terabytesoftware.dslist.entities;
 
 import jakarta.persistence.*;
+
+import java.util.Objects;
 
 @Entity
 @Table(name = "tb_game_list")
@@ -39,18 +41,14 @@ public class GameList {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o)
-            return true;
-        if (!(o instanceof GameList gameList))
-            return false;
-
-        return getId().equals(gameList.getId());
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        GameList gameList = (GameList) o;
+        return Objects.equals(getId(), gameList.getId());
     }
 
     @Override
     public int hashCode() {
-        return getId().hashCode();
+        return Objects.hash(getId());
     }
-
-
 }

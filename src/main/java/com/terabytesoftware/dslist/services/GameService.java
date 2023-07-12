@@ -1,11 +1,11 @@
-package com.superior.dslist.services;
+package com.terabytesoftware.dslist.services;
 
-import com.superior.dslist.dtos.GameDTO;
-import com.superior.dslist.dtos.GameMinDTO;
-import com.superior.dslist.entities.Game;
-import com.superior.dslist.projections.GameMinProjection;
-import com.superior.dslist.repositories.GameListRepository;
-import com.superior.dslist.repositories.GameRepository;
+import com.terabytesoftware.dslist.dtos.GameDTO;
+import com.terabytesoftware.dslist.dtos.GameMinDTO;
+import com.terabytesoftware.dslist.entities.Game;
+import com.terabytesoftware.dslist.projections.GameMinProjection;
+import com.terabytesoftware.dslist.repositories.GameListRepository;
+import com.terabytesoftware.dslist.repositories.GameRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

@@ -1,14 +1,14 @@
-package com.superior.dslist.dtos;
+package com.terabytesoftware.dslist.dtos;
 
-import com.superior.dslist.entities.Game;
-import com.superior.dslist.projections.GameMinProjection;
+import com.terabytesoftware.dslist.entities.Game;
+import com.terabytesoftware.dslist.projections.GameMinProjection;
 
 public class GameMinDTO {
 
     private Long id;
     private String title;
     private Integer year;
-    private String ImgUrl;
+    private String imgUrl;
     private String shortDescription;
 
     public GameMinDTO() {
@@ -18,7 +18,7 @@ public class GameMinDTO {
         id = entity.getId();
         title = entity.getTitle();
         year = entity.getYear();
-        ImgUrl = entity.getImgUrl();
+        imgUrl = entity.getImgUrl();
         shortDescription = entity.getShortDescription();
     }
 
@@ -26,7 +26,7 @@ public class GameMinDTO {
         id = projection.getId();
         title = projection.getTitle();
         year = projection.getYear();
-        ImgUrl = projection.getImgUrl();
+        imgUrl = projection.getImgUrl();
         shortDescription = projection.getShortDescription();
     }
 
@@ -43,7 +43,7 @@ public class GameMinDTO {
     }
 
     public String getImgUrl() {
-        return ImgUrl;
+        return imgUrl;
     }
 
     public String getShortDescription() {

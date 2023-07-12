@@ -1,9 +1,10 @@
-package com.superior.dslist.entities;
+package com.terabytesoftware.dslist.entities;
 
-import jakarta.persistence.Embeddable;
 import jakarta.persistence.EmbeddedId;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
+
+import java.util.Objects;
 
 @Entity
 @Table(name = "tb_belonging")
@@ -15,7 +16,6 @@ public class Belonging {
     private Integer position;
 
     public Belonging(){
-
     }
 
     public Belonging(Game game, GameList list, Integer position) {
@@ -44,14 +44,12 @@ public class Belonging {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-
         Belonging belonging = (Belonging) o;
-
-        return getId().equals(belonging.getId());
+        return Objects.equals(getId(), belonging.getId());
     }
 
     @Override
     public int hashCode() {
-        return getId().hashCode();
+        return Objects.hash(getId());
     }
 }

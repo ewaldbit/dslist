@@ -1,8 +1,10 @@
-package com.superior.dslist.entities;
+package com.terabytesoftware.dslist.entities;
 
 import jakarta.persistence.Embeddable;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
+
+import java.util.Objects;
 
 @Embeddable
 public class BelongingPK {
@@ -42,17 +44,12 @@ public class BelongingPK {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-
         BelongingPK that = (BelongingPK) o;
-
-        if (!getGame().equals(that.getGame())) return false;
-        return getList().equals(that.getList());
+        return Objects.equals(getGame(), that.getGame()) && Objects.equals(getList(), that.getList());
     }
 
     @Override
     public int hashCode() {
-        int result = getGame().hashCode();
-        result = 31 * result + getList().hashCode();
-        return result;
+        return Objects.hash(getGame(), getList());
     }
 }
