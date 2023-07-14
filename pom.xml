@@ -55,7 +55,7 @@
 						<manifest>
 							<addClasspath>true</addClasspath>
 							<classpathPrefix>lib/</classpathPrefix>
-							<mainClass>com.terabytesoftware.dslist</mainClass>
+							<mainClass>com.terabytesoftware.dslist.DslistApplication</mainClass>
 						</manifest>
 					</archive>
 				</configuration>
